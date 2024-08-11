@@ -4,10 +4,8 @@ services:
 
   nikita_small_cock_script:
     volumes:
-      - ./media:/app/media
       - ./:/app
     container_name: nikita_small_cock_script
-    restart: unless-stopped
     build: ./
     command: sh -c "python main.py"
       - ./:/usr/src/app/
