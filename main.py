@@ -36,7 +36,8 @@ def main():
     print(f"Page title: {driver.title}")
     if driver.title != 'Поиск 121182195 | Kaspi Магазин':
         print("page title is not valid")
-        print(driver.print_page())
+        with open("invalid_page_source.html", "w", encoding="utf-8") as file:
+            file.write(driver.page_source)
     else:
         print("all works well")
 
