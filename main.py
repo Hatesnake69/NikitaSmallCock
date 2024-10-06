@@ -34,10 +34,12 @@ def main():
     driver.get(url)
     print(f"Opened URL: {url}")
     print(f"Page title: {driver.title}")
-    print(
-        f"driver title is 'Поиск 121182195 | Kaspi Магазин'?\n "
-        f"{driver.title == 'Поиск 121182195 | Kaspi Магазин'}"
-    )
+    if driver.title != 'Поиск 121182195 | Kaspi Магазин':
+        print("page title is not valid")
+        print(driver.print_page())
+    else:
+        print("all works well")
+
 
 
 if __name__ == "__main__":
